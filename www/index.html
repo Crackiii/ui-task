@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/1cb50d7a23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container--full">
+        <div class="cf--left">
+            <div class="cfl--steps">
+                <div class="cfls--text">Step 1 of 3</div>
+                <div class="cfls--dots">
+                    <div class="cfls--wrap">
+                        <span class="cfls--active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cfl--form">
+                <div class="cflf--head">Let's set up your account</div>
+                <div class="cflf--text"> Already have an account ? <a href="">Sign in</a> </div>
+                <form id="demo-form" method="POST" onsubmit="formSubmit(event)">
+                    <div class="input--box">
+                        <input type="text" name="name" oninput="formOnChange(event)" id="name" autocomplete="off" />
+                        <label for="name">Your name</label>
+                    </div>
+                    <div class="input--box">
+                        <input type="email" name="email" oninput="formOnChange(event)" id="email" autocomplete="off" />
+                        <label for="email">Email address</label>
+                    </div>
+                    <div class="input--box">
+                        <select onchange="formOnChange(event)" name="type">
+                            <option selected disabled>I would describe my user type is</option>
+                            <option>Khan</option>
+                            <option>Swati</option>
+                        </select>
+                    </div>
+                    <div class="input--box">
+                        <input type="password" name="password" oninput="formOnChange(event)" id="password"
+                            autocomplete="off" />
+                        <label for="password">Password</label>
+                        <p class="input--constraint">Minimum 8 characters</p>
+                        <div class="show--password" onclick="changeClass(event)"> <i class="fas fa-eye"></i> </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="cf--right">Right</div>
+    </div>
+</body>
+
+<script src="/bundle.js"></script>
+
+</html>

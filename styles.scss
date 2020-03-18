@@ -1,0 +1,176 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+
+    .container--full {
+        border: 1px solid black;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+        .cf--left {
+            flex-grow: 1.66;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .cfl--steps {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding-top: 30px;
+                font-size: 10px;
+                font-weight: 500;
+
+                .cfls--dots {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0 20px;
+
+                    .cfls--wrap {
+                        display: flex;
+                        flex-direction: row;
+
+                        span {
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 50%;
+                            margin: 0px 4px;
+                            background: #999;
+                        }
+
+                        span.cfls--active {
+                            background: #000;
+                        }
+                    }
+                }
+            }
+
+            .cfl--form {
+                width: 50%;
+                margin: auto;
+
+                .cflf--head {
+                    color: #333333;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                .cflf--text {
+                    color: #6a6a6a;
+                    font-size: 11px;
+                    padding: 30px 0;
+
+                    a {
+                        color: #276ef9;
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                }
+
+                .input--box {
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    input,
+                    select {
+                        border: 1px solid rgb(235, 235, 235);
+                        background: none;
+                        padding: 15px 14px;
+                        border-radius: 2px;
+                    }
+
+                    input {
+                        width: 100%;
+                        outline: none;
+                    }
+
+                    select {
+                        display: inline-block;
+                        width: 100%;
+                        margin: 0;
+                        line-height: 1.5;
+                        outline: 0;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border-radius: 0px;
+
+
+                        &:focus:-moz-focusring {
+                            color: transparent;
+                            text-shadow: 0 0 0 #000;
+                        }
+
+                        &:after {
+                            position: absolute;
+                            top: 50%;
+                            right: 1.25rem;
+                            display: inline-block;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            margin-top: -.15rem;
+                            pointer-events: none;
+                        }
+
+                        &:active {
+                            color: #fff;
+                        }
+
+                        &::-ms-expand {
+                            display: none;
+                        }
+                    }
+
+                    label {
+                        position: absolute;
+                        z-index: -1;
+                        display: block;
+                        margin-top: -30px;
+                        color: #777;
+                        margin-left: 10px;
+                        cursor: text;
+                        background: #f9f9f9;
+                        padding: 0px 4px;
+                        transition: .2s;
+                        font-size: 13px;
+                    }
+
+                    // input:focus+label {
+                    //     &.padded {
+                    //         margin-top: -51px;
+                    //         z-index: 1;
+                    //         margin-left: 5px;
+                    //         font-size: 11px;
+                    //     }
+                    // }
+
+                    .input--constraint {
+                        font-size: 11px;
+                        color: #888;
+                    }
+
+                    .show--password {
+                        display: block;
+                        position: absolute;
+                        right: 8px;
+                        top: 15px;
+                        cursor: pointer;
+                        font-size: 13px;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+
+        .cf--right {
+            flex-grow: 1;
+            background: #276ef9;
+        }
+    }
+}
